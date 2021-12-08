@@ -1,0 +1,21 @@
+{%  load  sidebar  %}
+
+<div class="newsletter">
+    <h2 class="sidebar-title">Search post</h2>
+    <form action="{% url 'search'  %}" method="get">
+        <input type="text" name="search" id="" placeholder="Search">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="button-group filters-button-group">
+    <button data-filter=".recent" class="button is-checked">popular</button>
+    <button data-filter=".popular" class="button">recent</button>
+</div>
+
+<div class="grid" style="position: relative; height: 1221.93px;">
+    {% get_popular_posts 5 %}
+</div>
+
+    {% show_tegs %}
+

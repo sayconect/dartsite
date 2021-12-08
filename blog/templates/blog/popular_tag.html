@@ -1,0 +1,13 @@
+<div class="portfolio-item recent" style="position: absolute; left: 0px; top: 0px;">
+    {%  for post in posts  %}
+    <div class="portfolio-text row">
+        <div class="col-md-3">
+            <a href="{{  post.get_absolute_url  }}"><img src="{{  post.photo.url  }}" alt="{{  post.title  }}"></a>
+        </div>
+        <div class="col-md-9">
+            <h5><a href="{{  post.get_absolute_url  }}">{{  post.title  }}</a></h5>
+            <p>By {{  post.author }}<span>|</span>{{ post.created_at|date:"d F Y"  }}</p>
+        </div>
+    </div>
+    {%  endfor  %}
+</div>

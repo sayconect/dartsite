@@ -1,0 +1,6 @@
+<div class="tags">
+    <h2 class="sidebar-title">Tags</h2>
+    {%  for teg in tegs  %}
+    <p><a href="{{  teg.get_absolute_url  }}">{{  teg.title  }}</a></p>
+    {%  endfor  %}
+</div>
